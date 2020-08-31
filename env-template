@@ -1,0 +1,4 @@
+export SLACK_TEAM_NAME=yournamehere
+export SLACK_USER_NAME=youremailhere
+export SLACK_PASSWORD=yourslackpasswordhere
+export NGROK_DOCKER_CONTAINER_NAME=ngrok

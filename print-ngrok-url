@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+# print-ngrok-url
+#
+# Prints the ngrok URL found within a ngrok docker container
+# This function assumes you're using the ngrok docker
+# container found at https://github.com/shkoliar/docker-ngrok,
+# and it's functioning correctly. For what it's worth, I had
+# to use network_mode = host for ngrok to actually build
+# a working proxy tunnel.
+
+function print-ngrok-url() {
+  docker logs ngrok --tail 5 |
+  sed 's/https/\nhttps/g' | 
+  grep ngrok | 
+  grep https | 
+  tail -n 1 | 
+  sed "s/\".*//"
+}
+
+# This should print just one line, the ngrok URL
+print-ngrok-url

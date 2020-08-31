@@ -1,0 +1,12 @@
+{
+  "name": "slack-dev-url-updater",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node updater.js"
+  },
+  "dependencies": {
+    "puppeteer": "^5.2.1",
+    "shelljs": "^0.8.4"
+  }
+}
